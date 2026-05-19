@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entrar | Estacionamentos</title>
+    <script type="module" crossorigin src="./assets/login-rel7FGCt.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/auth-QZ7grxCN.js">
+    <link rel="modulepreload" crossorigin href="./assets/icons-DUaS2wMO.js">
+    <link rel="stylesheet" crossorigin href="./assets/auth-CXbaEo7U.css">
+  </head>
+  <body class="min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-50">
+    <main class="flex min-h-screen items-center justify-center px-4 py-10">
+      <section class="w-full max-w-md rounded-lg border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+        <div class="mb-8 flex flex-col items-center text-center">
+          <img src="./assets/logo-DIVXN9jY.png" alt="Logotipo do Estacionamentos" class="mb-4 h-20 w-20 object-contain" />
+          <h1 class="text-2xl font-bold">Estacionamentos</h1>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Acesse sua conta para continuar.</p>
+        </div>
+
+        <form id="form-login" class="space-y-5">
+          <div>
+            <label for="email" class="label">E-mail</label>
+            <input id="email" name="email" type="email" autocomplete="email" class="input mt-1" required />
+          </div>
+          <div>
+            <label for="senha" class="label">Senha</label>
+            <input id="senha" name="senha" type="password" autocomplete="current-password" class="input mt-1" required />
+          </div>
+          <button type="submit" class="btn-primary w-full">
+            <span data-heroicon="arrow-right-on-rectangle"></span>
+            Entrar
+          </button>
+          <p class="text-center text-sm text-slate-500 dark:text-slate-400">Recuperação de senha será feita pelo Supabase.</p>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+import{g as o,a,b as t,r as n}from"./auth-QZ7grxCN.js";async function c(){try{const i=await o();if(!i){window.location.href=a("/login.html");return}const r=await t(i.id);n(r)}catch{window.location.href=a("/login.html")}}c();
