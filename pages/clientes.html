@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clientes | Estacionamentos</title>
+    <script type="module" src="../js/pages/clientes.js"></script>
+  </head>
+  <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-50">
+    <div id="app-shell">
+      <main class="p-6 lg:ml-64">
+        <div id="page-header"></div>
+        <section class="grid gap-6 xl:grid-cols-[minmax(320px,460px)_1fr]">
+          <form id="form-cliente" class="card space-y-4">
+            <input id="cliente-id" type="hidden" />
+            <div class="flex items-center gap-2">
+              <span data-heroicon="users" class="text-purple-600"></span>
+              <h2 class="text-lg font-bold">Cadastro de cliente</h2>
+            </div>
+            <div>
+              <label for="cliente-nome" class="label">Nome</label>
+              <input id="cliente-nome" class="input mt-1" required />
+            </div>
+            <div>
+              <label for="cliente-email" class="label">E-mail</label>
+              <input id="cliente-email" class="input mt-1" type="email" />
+            </div>
+            <div>
+              <label for="cliente-telefone" class="label">Telefone</label>
+              <input id="cliente-telefone" class="input mt-1" />
+            </div>
+            <div class="flex gap-2">
+              <button class="btn-primary" type="submit"><span data-heroicon="plus"></span>Salvar</button>
+              <button id="limpar-cliente" class="btn-secondary" type="button">Limpar</button>
+            </div>
+          </form>
+          <div class="card">
+            <div class="table-wrapper">
+              <table class="table">
+                <thead><tr><th>Nome</th><th>E-mail</th><th>Telefone</th><th>Situação</th><th>Ações</th></tr></thead>
+                <tbody id="tabela-clientes"></tbody>
+              </table>
+            </div>
+            <div id="paginacao-clientes" class="mt-4"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

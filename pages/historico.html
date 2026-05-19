@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Histórico | Estacionamentos</title>
+    <script type="module" src="../js/pages/historico.js"></script>
+  </head>
+  <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-50">
+    <div id="app-shell">
+      <main class="p-6 lg:ml-64">
+        <div id="page-header"></div>
+        <section class="card">
+          <form id="form-filtros" class="mb-5 grid gap-4 md:grid-cols-4">
+            <div>
+              <label for="filtro-placa" class="label">Placa</label>
+              <input id="filtro-placa" class="input mt-1 uppercase" maxlength="8" />
+            </div>
+            <div>
+              <label for="filtro-inicio" class="label">Data inicial</label>
+              <input id="filtro-inicio" class="input mt-1" type="date" />
+            </div>
+            <div>
+              <label for="filtro-fim" class="label">Data final</label>
+              <input id="filtro-fim" class="input mt-1" type="date" />
+            </div>
+            <div>
+              <label for="filtro-status" class="label">Status</label>
+              <select id="filtro-status" class="input mt-1">
+                <option value="">Todos</option>
+                <option value="aberta">Aberta</option>
+                <option value="encerrada">Encerrada</option>
+              </select>
+            </div>
+            <div class="flex gap-3 md:col-span-4">
+              <button type="submit" class="btn-primary">
+                <span data-heroicon="magnifying-glass"></span>
+                Filtrar
+              </button>
+              <button type="button" id="limpar-filtros" class="btn-secondary">
+                <span data-heroicon="x-mark"></span>
+                Limpar
+              </button>
+            </div>
+          </form>
+          <div class="table-wrapper">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Placa</th>
+                  <th>Veículo</th>
+                  <th>Cliente</th>
+                  <th>Entrada</th>
+                  <th>Saída</th>
+                  <th>Valor</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="tabela-historico"></tbody>
+            </table>
+          </div>
+          <div id="paginacao-historico" class="mt-4"></div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

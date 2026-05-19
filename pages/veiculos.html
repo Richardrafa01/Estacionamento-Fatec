@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Veículos | Estacionamentos</title>
+    <script type="module" src="../js/pages/veiculos.js"></script>
+  </head>
+  <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-50">
+    <div id="app-shell">
+      <main class="p-6 lg:ml-64">
+        <div id="page-header"></div>
+        <section class="grid gap-6 xl:grid-cols-[minmax(320px,480px)_1fr]">
+          <form id="form-veiculo" class="card space-y-4">
+            <input id="veiculo-id" type="hidden" />
+            <div class="flex items-center gap-2">
+              <span data-heroicon="truck" class="text-purple-600"></span>
+              <h2 class="text-lg font-bold">Cadastro de veículo</h2>
+            </div>
+            <div class="grid gap-4 md:grid-cols-2">
+              <div>
+                <label for="veiculo-placa" class="label">Placa</label>
+                <input id="veiculo-placa" class="input mt-1 uppercase" required />
+              </div>
+              <div>
+                <label for="veiculo-cor" class="label">Cor</label>
+                <input id="veiculo-cor" class="input mt-1" />
+              </div>
+            </div>
+            <div>
+              <label for="veiculo-tipo" class="label">Tipo do cliente</label>
+              <select id="veiculo-tipo" class="input mt-1" required>
+                <option value="mensalista">Mensalista</option>
+                <option value="avulso">Avulso</option>
+              </select>
+            </div>
+            <div>
+              <label for="veiculo-cliente" class="label">Cliente</label>
+              <select id="veiculo-cliente" class="input mt-1"></select>
+            </div>
+            <div class="grid gap-4 md:grid-cols-2">
+              <div>
+                <label for="veiculo-marca" class="label">Marca</label>
+                <select id="veiculo-marca" class="input mt-1" required></select>
+              </div>
+              <div>
+                <label for="veiculo-modelo" class="label">Modelo</label>
+                <select id="veiculo-modelo" class="input mt-1" required></select>
+              </div>
+            </div>
+            <div class="flex gap-2">
+              <button class="btn-primary" type="submit"><span data-heroicon="plus"></span>Salvar</button>
+              <button id="limpar-veiculo" class="btn-secondary" type="button">Limpar</button>
+            </div>
+          </form>
+          <div class="card">
+            <div class="table-wrapper">
+              <table class="table">
+                <thead><tr><th>Placa</th><th>Veículo</th><th>Cliente</th><th>Tipo</th><th>Situação</th><th>Ações</th></tr></thead>
+                <tbody id="tabela-veiculos"></tbody>
+              </table>
+            </div>
+            <div id="paginacao-veiculos" class="mt-4"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

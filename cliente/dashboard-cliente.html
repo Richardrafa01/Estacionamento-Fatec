@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Área do Cliente | Estacionamentos</title>
+    <script type="module" src="../js/pages/dashboard-cliente.js"></script>
+  </head>
+  <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-50">
+    <main class="min-h-screen p-6">
+      <div id="page-header"></div>
+      <section class="grid gap-6 lg:grid-cols-2">
+        <div class="card">
+          <h1 class="mb-4 text-xl font-bold">Meus veículos</h1>
+          <div class="table-wrapper">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Placa</th>
+                  <th>Marca</th>
+                  <th>Modelo</th>
+                  <th>Situação</th>
+                </tr>
+              </thead>
+              <tbody id="tabela-veiculos-cliente"></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card">
+          <h2 class="mb-4 text-xl font-bold">Meu histórico</h2>
+          <div class="table-wrapper">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Placa</th>
+                  <th>Entrada</th>
+                  <th>Saída</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="tabela-historico-cliente"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movimentações | Estacionamentos</title>
+    <script type="module" src="../js/pages/movimentacoes.js"></script>
+  </head>
+  <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-50">
+    <div id="app-shell">
+      <main class="p-6 lg:ml-64">
+        <div id="page-header"></div>
+        <section class="grid gap-6 lg:grid-cols-2">
+          <form id="form-entrada" class="card space-y-4">
+            <div class="flex items-center gap-2">
+              <span data-heroicon="arrow-down-circle" class="text-green-600"></span>
+              <h2 class="text-lg font-bold">Registrar entrada</h2>
+            </div>
+            <div>
+              <label for="placa-entrada" class="label">Placa do veículo</label>
+              <input id="placa-entrada" class="input mt-1 uppercase" maxlength="8" placeholder="ABC1D23" required />
+            </div>
+            <button class="btn-success" type="submit">
+              <span data-heroicon="check-circle"></span>
+              Confirmar entrada
+            </button>
+          </form>
+
+          <form id="form-saida" class="card space-y-4">
+            <div class="flex items-center gap-2">
+              <span data-heroicon="arrow-up-circle" class="text-red-600"></span>
+              <h2 class="text-lg font-bold">Registrar saída</h2>
+            </div>
+            <div>
+              <label for="placa-saida" class="label">Placa do veículo</label>
+              <input id="placa-saida" class="input mt-1 uppercase" maxlength="8" placeholder="ABC1D23" required />
+            </div>
+            <div>
+              <label for="valor-cobrado" class="label">Valor cobrado</label>
+              <input id="valor-cobrado" class="input mt-1" type="number" min="0" step="0.01" required />
+            </div>
+            <button class="btn-danger" type="submit">
+              <span data-heroicon="currency-dollar"></span>
+              Confirmar saída
+            </button>
+          </form>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
