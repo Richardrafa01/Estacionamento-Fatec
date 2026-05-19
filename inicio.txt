@@ -1,6 +1,0 @@
-Crie a estrutura inicial do projeto estacionamentos
-
-Leia e respeite os arquivos:
-- AGENTS.md
-- MEMORY.md
-- DESIGN_SYSTEM.md
